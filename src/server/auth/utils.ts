@@ -17,7 +17,7 @@ export type AuthSession = {
       name?: string;
       email?: string;
       username?: string;
-      role: typeof roleEnum;
+      role: (typeof roleEnum.enumValues)[number];
     };
   } | null;
 };

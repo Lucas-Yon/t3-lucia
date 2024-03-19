@@ -10,7 +10,7 @@ import { sessions, users, type roleEnum } from "../db/schema";
 interface DatabaseUserAttributes {
   email: string;
   name: string;
-  role: typeof roleEnum;
+  role: (typeof roleEnum.enumValues)[number];
 }
 
 export const adapter = new DrizzlePostgreSQLAdapter(db, sessions, users);

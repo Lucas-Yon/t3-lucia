@@ -42,7 +42,9 @@ export const posts = createTable(
  *
  */
 
-export const roleEnum = pgEnum("role", ["user", "creator", "admin"]);
+const roleValues = ["user", "creator", "admin"] as const;
+
+export const roleEnum = pgEnum("role", roleValues);
 
 export const users = createTable("user", {
   id: text("id").primaryKey(),
