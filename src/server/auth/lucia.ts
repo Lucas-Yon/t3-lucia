@@ -5,7 +5,7 @@ import { type Session, type User, Lucia } from "lucia";
 import { db } from "@/server/db/index";
 
 import { DrizzlePostgreSQLAdapter } from "@lucia-auth/adapter-drizzle";
-import { sessions, users, type roleEnum } from "../db/schema";
+import { sessions, users, type roleEnum } from "../db/schema/auth";
 
 interface DatabaseUserAttributes {
   email: string;

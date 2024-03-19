@@ -15,7 +15,7 @@ import {
   validateAuthFormData,
   getUserAuth,
 } from "../auth/utils";
-import { users, updateUserSchema } from "@/server/db/schema";
+import { users, updateUserSchema } from "@/server/db/schema/auth";
 
 interface ActionResult {
   error: string;

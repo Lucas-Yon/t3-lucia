@@ -8,7 +8,7 @@ import {
   type UsernameAndPassword,
   authenticationSchema,
   type roleEnum,
-} from "../db/schema";
+} from "../db/schema/auth";
 
 export type AuthSession = {
   session: {
