@@ -8,7 +8,7 @@
     "db:push": "drizzle-kit push:pg",
     "db:studio": "drizzle-kit studio",
     "db:generate": "drizzle-kit generate:pg",
-    "db:migrate": "tsx src/lib/db/migrate.ts",
+    "db:migrate": "tsx src/server/db/migrate.ts",
     "db:drop": "drizzle-kit drop",
     "db:pull": "drizzle-kit introspect:pg",
     "db:check": "drizzle-kit check:pg",
