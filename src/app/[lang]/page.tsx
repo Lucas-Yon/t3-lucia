@@ -3,10 +3,12 @@ import Link from "next/link";
 
 import { CreatePost } from "@/app/_components/create-post";
 import { api } from "@/trpc/server";
+import { type paramsi18, getDictionary } from "@/lib/dictionary";
 
-export default async function Home() {
+export default async function Home({ params }: { params: paramsi18 }) {
   noStore();
   const hello = await api.post.hello.query({ text: "from tRPC" });
+  const dictionary = await getDictionary(params.lang, "admin");
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-center bg-gradient-to-b from-[#2e026d] to-[#15162c] text-white">
